@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function fetchWord() {
   return fetch('https://random-word-api.herokuapp.com/word?number=1')
   .then((response) => response.json())
@@ -47,3 +48,20 @@ function gameRestart () {
   context.clearRect(0, 0, 400, 400);
   play();
 }
+=======
+
+function fetchWord() {
+    return fetch('https://random-word-api.herokuapp.com/word?number=1')
+    .then((response) => response.json())
+    .then((response) => processWord(response));
+}
+
+function processWord(wordArray) {
+    let word = wordArray[0];
+    console.log(word);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    fetchWord();
+})
+>>>>>>> d7dd0dae1d5ba6e07e1645d572437600108fbcab

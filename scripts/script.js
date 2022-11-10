@@ -6,7 +6,7 @@ function fetchWord() {
 
 function processWord(wordArray) {
     let word = wordArray[0];
-    console.log(word);
+    console.log(word)
 }
 
 
@@ -47,3 +47,17 @@ function createInputFunction (){
     return clickedLetters
 }
 createInputFunction()
+
+function createBlank(word){
+    console.log(`psladsfsdfsd ${word}`)
+    const wordLetterArray = word.split('')
+    const blanks = document.getElementById(`blanks`)
+
+    wordLetterArray.forEach((letter)=>{
+        function createInput(place,pHolder){
+            place.innerHTML +=`<span><input class= 'blank' type='text' name='type' value='' placeholder=${pHolder} readonly> </span>`     
+        }
+        createInput(blanks,letter)
+    })
+}
+createBlank("BrunoMars")

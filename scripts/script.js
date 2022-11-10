@@ -49,7 +49,6 @@ function createInputFunction (){
 createInputFunction()
 
 function createBlank(word){
-    console.log(`psladsfsdfsd ${word}`)
     const wordLetterArray = word.split('')
     const blanks = document.getElementById(`blanks`)
 
